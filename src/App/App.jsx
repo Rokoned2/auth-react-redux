@@ -17,11 +17,11 @@ function App() {
       // clear alert on location change
       dispatch(alertActions.clear());
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="jumbotron">
-      <div className="container">
+      <div className="container vh-100">
         <div className="col-md-8 offset-md-2">
           {alert.message && (
             <div className={`alert ${alert.type}`}>{alert.message}</div>

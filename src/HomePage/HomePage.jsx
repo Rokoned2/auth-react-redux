@@ -11,7 +11,7 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(userActions.getAll());
-  }, []);
+  }, [dispatch]);
 
   function handleDeleteUser(id) {
     dispatch(userActions.delete(id));
@@ -40,12 +40,12 @@ function HomePage() {
                 <span>
                   {" "}
                   -{" "}
-                  <a
+                  <div
                     onClick={() => handleDeleteUser(user.id)}
                     className="text-primary"
                   >
                     Eliminar
-                  </a>
+                  </div>
                 </span>
               )}
             </li>
